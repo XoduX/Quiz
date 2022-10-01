@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wing inc.</title>
+    <link rel = "icon" href =
+"wing.png"
+        type = "image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Urbanist' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </head>
+<style>
+
+</style>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top shadow-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)"> <img src="wing.png" alt="..." height="50"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="mynavbar">
+        <ul class="navbar-nav me-auto " style="--bs-nav-link-hover-color: #141619;">
+          <li class="nav-item" id="nav-link">
+            <a class="nav-link " href="#">Home</a>
+          </li>
+
+          <li class="nav-item" id="nav-link">
+            <a class="nav-link " href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown" id="dropdown">
+            <a class="nav-link text-dark active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Membership</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="#">Class A</a></li>
+              <li><a class="dropdown-item text-white" href="#">Class B</a></li>
+              <li><a class="dropdown-item text-white" href="#">Class C</a></li>
+            </ul>
+          </li>
+
+
+
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-dark" type="button" id="buttons" data-bs-toggle="modal" data-bs-target="#signup">Sign up</button>
+          <button class="btn btn-outline-dark" type="button" id="buttons" data-bs-toggle="modal" data-bs-target="#login">Log in</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid" id="ispc">
+    <div class="d-flex flex-column bg-dark" id="box" style="--bs-bg-opacity: .6;">
+        <div class="display-2" id="inf">WING INC.</div>
+        <div class="display-6" id="inf">WING FITNESS INCORPORATION</div>
+
+        <div id="inf"><a href="#" class="btn btn-dark p-3 mt-2 fw-bold" role="button" aria-pressed="true">Membership</a></div>
+      </div>
+  </div>
+
+
+
+
+  <div class="modal" id="login">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Log in</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form action="/action_page.php">
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-check mb-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="signup">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Sign up</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form action="/action_page.php">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" name="name" required>
+                  </div>
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                    <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
+                    <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                    <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
+                    <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+                    <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off" required>
+                    <label class="btn btn-sm btn-outline-secondary" for="secret">Others</label>
+                       <div class="valid-feedback mv-up">You selected a gender!</div>
+                        <div class="invalid-feedback mv-up">Please select a gender!</div>
+                    </div>
+
+
+
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Enter password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                  </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<style>
+#navbar {
+  background-color: white;
+
+}
+.nav-link {
+   color:black;
+
+
+}
+body{
+   font-family: 'Urbanist', sans-serif;
+   background-color: #ffff;
+}
+
+.dropdown:hover{
+   background-color: gray;
+
+}
+.dropdown-menu{
+   background-color: gray;
+}
+.dropdown-item:hover {
+   background-color: gray;
+}
+#nav-link {
+display: inline-block;
+position: relative;
+
+}
+
+#nav-link:after {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: gray;
+transform-origin: bottom right;
+transition: transform 0.30s ease-out;
+}
+
+#nav-link:hover:after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+#col2 {
+height: fit-content;
+width:fit-content;
+border-radius: 5px;
+text-align: center;
+color: #051242;
+transition: 0.15s;
+cursor: pointer;
+
+
+
+}
+
+#col2:hover{
+transform: scale(1.06);
+}
+#headerSw{
+background-color: #051242;
+color: black;
+
+}
+#headerSw1{
+background-color: #051242;
+color: white;
+text-align: center;
+
+}
+#tablebook{
+background-color: white;
+border-radius: 5px;
+width:auto;
+margin: auto;
+
+}
+#headerSw2{
+text-align: center;}
+a{
+color: white;
+text-decoration: none;
+}
+a:hover{
+color: gray;
+}
+
+#buttons{
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.jumbotron {
+  color: white;
+  background-image: url("https://media.blogto.com/articles/20210221-KXCoffeeGym29.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  height: 100vh;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ispc{
+  margin-top: 4em;
+
+}
+#inf{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing:2px ;
+}
+#info{
+  text-align: center;
+  color: white;
+
+  letter-spacing:2px ;
+}
+#box{
+  padding-top: 4em;
+  height: 100vh;
+}
+</style>
+</html>
